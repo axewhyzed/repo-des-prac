@@ -1,0 +1,91 @@
+<button (click)="toggleFormat('bold')">Bold</button>
+<button (click)="toggleFormat('italic')">Italic</button>
+<button (click)="toggleFormat('underline')">Underline</button>
+<button (click)="toggleFormat('strikethrough')">Strikethrough</button>
+
+<input type="color" (input)="changeTextColor($any($event.target).value)" />
+
+<select #fontSizeSelect (change)="changeFontSize(fontSizeSelect.value)">
+  <option value="1">12px</option>
+  <option value="2">14px</option>
+  <option value="3">16px</option>
+  <option value="4">18px</option>
+  <option value="5">24px</option>
+  <option value="6">32px</option>
+  <option value="7">48px</option>
+  <!-- Add more font sizes as needed -->
+</select>
+
+
+<select #fontFamilySelect (change)="changeFontFamily(fontFamilySelect.value)">
+  <option value="Arial" style="font-family: Arial">Arial</option>
+  <option value="'Brush Script MT', cursive" style="font-family: Brush Script MT">Brush Script MT</option>
+  <option value="Calibri" style="font-family: Calibri">Calibri</option>
+  <option value="Cambria" style="font-family: Cambria">Cambria</option>
+  <option value="Comic Sans MS" style="font-family: Comic Sans MS">Comic Sans MS</option>
+  <option value="Courier New" style="font-family: Courier New">Courier New</option>
+  <option value="Franklin Gothic" style="font-family: Franklin Gothic">Franklin Gothic</option>
+  <option value="Garamond" style="font-family: Garamond">Garamond</option>
+  <option value="Georgia" style="font-family: Georgia">Georgia</option>
+  <option value="Goudy Old Style" style="font-family: Goudy Old Style">Goudy Old Style</option>
+  <option value="Helvetica" style="font-family: Helvetica">Helvetica</option>
+  <option value="Impact" style="font-family: Impact">Impact</option>
+  <option value="Microsoft Sans Serif" style="font-family: Microsoft Sans Serif">MS Sans Serif</option>
+  <option value="Perpetua" style="font-family: Perpetua">Perpetua</option>
+  <option value="Rockwell" style="font-family: Rockwell">Rockwell</option>
+  <option value="Tahoma" style="font-family: Tahoma">Tahoma</option>
+  <option value="Times New Roman" style="font-family: Times New Roman">Times New Roman</option>
+  <option value="Verdana" style="font-family: Verdana">Verdana</option>
+  <!-- Add more font families as needed -->
+</select>
+
+<div contenteditable="true" #editableDiv> <!-- Default size is 16px in this currently-->
+  Select some text and use the buttons to format it... <br />
+  Or write your own text
+</div>
+
+<!-- <p>work-area works!</p> -->
+<!-- <div class="comp">
+  <h1 id="tableLabel">Weather forecast</h1>
+
+  <p>This component demonstrates fetching data from the server.</p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi at, quas
+    maiores quos temporibus reprehenderit pariatur fuga repellendus soluta
+    magnam quibusdam voluptates, autem quae. Maxime velit hic temporibus quis
+    error ab modi aspernatur iusto eveniet sed, itaque animi, veritatis ut
+    laboriosam similique quam vero delectus vel maiores atque illo corporis nam
+    cum. Provident aliquam earum architecto facere neque! Nam totam assumenda
+    deleniti, amet suscipit libero fugiat optio voluptatum dolorum ad magni
+    maxime, asperiores, vel cupiditate sapiente velit necessitatibus magnam
+    cumque consequatur similique laboriosam et id placeat corporis? Sequi
+    voluptate distinctio, ea vel commodi ducimus corrupti vero? Velit facere
+    reiciendis at.
+  </p>
+
+  <p *ngIf="!forecasts">
+    <em
+      >Loading... Please refresh once the ASP.NET backend has started. See
+      <a href="https://aka.ms/jspsintegrationangular"
+        >https://aka.ms/jspsintegrationangular</a
+      >
+      for more details.</em
+    >
+  </p>
+
+  <table *ngIf="forecasts">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Temp. (C)</th>
+        <th>Temp. (F)</th>
+        <th>Summary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let forecast of forecasts">
+        <td>{{ forecast }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->

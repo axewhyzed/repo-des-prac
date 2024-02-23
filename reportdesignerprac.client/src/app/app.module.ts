@@ -4,10 +4,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { WorkAreaComponent } from './work-area/work-area.component';
+import { RibbonComponent } from './ribbon/ribbon.component';
+import { StatusBarComponent } from './status-bar/status-bar.component';
+import { NavigationPanelComponent } from './navigation-panel/navigation-panel.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    WorkAreaComponent,
+    RibbonComponent,
+    StatusBarComponent,
+    NavigationPanelComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'material-icons/iconfont/material-icons.css';
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 !important;
+}
